@@ -1,8 +1,7 @@
 name: Create PR from main to develop
 
 on:
-  push:
-    branches: [main, master]
+  push
 
 jobs:
   call_sync_develop_and_main:
