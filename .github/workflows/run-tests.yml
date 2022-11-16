@@ -4,8 +4,7 @@
 name: Run Tests
 
 on:
-  pull_request:
-    branches: [develop, release/*, hotfix/*]
+  workflow_call:
 
 jobs:
   call_run_tests:

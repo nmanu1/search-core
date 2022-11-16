@@ -1,8 +1,7 @@
 name: Run Linter
 
 on:
-  pull_request:
-    branches: [develop, release/*, hotfix/*]
+  workflow_call:
 
 jobs:
   linting:
