@@ -3,7 +3,9 @@
 
 name: Run Tests
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches: [develop, release/*, hotfix/*]
 
 jobs:
   call_run_tests:
