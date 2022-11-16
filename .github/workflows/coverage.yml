@@ -4,7 +4,7 @@
 name: Code Coverage
 
 on:
-  pull_request:
+  workflow_call
 
 jobs:
   call_code_coverage:
