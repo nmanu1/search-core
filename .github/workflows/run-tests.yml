@@ -4,7 +4,7 @@
 name: Run Tests
 
 on:
-  workflow_call:
+  workflow_call
 
 jobs:
   call_run_tests:

@@ -1,7 +1,7 @@
 name: Run Linter
 
 on:
-  workflow_call:
+  workflow_call
 
 jobs:
   linting:
