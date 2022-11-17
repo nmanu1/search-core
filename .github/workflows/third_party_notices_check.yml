@@ -1,6 +1,6 @@
 name: Check and Update Third Party Notices
 
-on: [pull_request, push]
+on: [pull_request]
 
 jobs:
   call_notices_check:
