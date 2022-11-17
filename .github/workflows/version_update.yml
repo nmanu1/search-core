@@ -1,8 +1,6 @@
 name: Update package version for release & hotfix branches
 
-on:
-  push:
-    branches: [release/*, hotfix/*]
+on: workflow_call
 
 jobs:
   call_version_update:
