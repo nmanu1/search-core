@@ -3,16 +3,16 @@
 
 name: Run Tests
 
-on: [push, pull_request]
+on: push
 
 jobs:
   call_run_tests:
-    uses: yext/slapshot-reusable-workflows/.github/workflows/run_tests.yml@v1
+    uses: yext/slapshot-reusable-workflows/.github/workflows/run_tests.yml@dev/remove-node-12
     with:
       build_script: npm run build-ci
 
   compilation_check_for_test_site:
-    uses: yext/slapshot-reusable-workflows/.github/workflows/run_tests.yml@v1
+    uses: yext/slapshot-reusable-workflows/.github/workflows/run_tests.yml@dev/remove-node-12
     with:
       test_script: cd test-site && npm i && npm run build
       node_matrix: '["16.x"]'
