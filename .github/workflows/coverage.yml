@@ -3,10 +3,7 @@
 
 name: Code Coverage
 
-on:
-  push:
-    branches-ignore: dev/*
-  pull_request:
+on: workflow_call
 
 jobs:
   call_code_coverage:
