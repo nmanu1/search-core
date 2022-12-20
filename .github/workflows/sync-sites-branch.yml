@@ -6,7 +6,12 @@ on:
       - master
 
 jobs:
+  strategy:
+    matrix:
+      target_branch: ["storybook-site", "test"]
   call_sync_branches:
     uses: yext/slapshot-reusable-workflows/.github/workflows/sync_default_branch.yml@dev/sync-default-branch
+    with:
+      target_branch: ${{ matrix.target_branch }}
     secrets:
       caller_github_token: ${{ secrets.GITHUB_TOKEN }}
