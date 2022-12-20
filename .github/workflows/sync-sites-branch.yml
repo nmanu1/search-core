@@ -8,7 +8,5 @@ on:
 jobs:
   call_sync_branches:
     uses: yext/slapshot-reusable-workflows/.github/workflows/sync_default_branch.yml@dev/sync-default-branch
-    with:
-      target_branch: test
     secrets:
       caller_github_token: ${{ secrets.GITHUB_TOKEN }}
