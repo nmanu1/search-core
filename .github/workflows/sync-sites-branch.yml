@@ -3,12 +3,15 @@ name: Sync Main to Storybook Site Branch & Test Site Branch
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   call_sync_branches:
+    strategy:
+      matrix:
+        target_branch: ["storybook-site", "test-site"]
     uses: yext/slapshot-reusable-workflows/.github/workflows/sync_default_branch.yml@v1
     with:
-      target_branch: storybook-site
+      target_branch: ${{ matrix.target_branch }}
     secrets:
       caller_github_token: ${{ secrets.GITHUB_TOKEN }}
