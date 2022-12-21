@@ -3,7 +3,7 @@ name: Sync Main to Storybook Site Branch & Test Site Branch
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   call_sync_branches:
