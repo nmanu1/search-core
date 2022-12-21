@@ -9,7 +9,7 @@ jobs:
   call_sync_branches:
     strategy:
       matrix:
-        target_branch: ["storybook-site", "test-site"]
+        target_branch: ["storybook-site", "test"]
     uses: yext/slapshot-reusable-workflows/.github/workflows/sync_default_branch.yml@v1
     with:
       target_branch: ${{ matrix.target_branch }}
